@@ -8,8 +8,7 @@ for(i=0;i<5;i++){
 
     for(j=0;j<5;j++){
         const td=document.createElement('td')
-        k=k+2;
-        td.innerText=k;
+        td.innerText=k++;
         tr.append(td)
     }
     table.append(tr)
