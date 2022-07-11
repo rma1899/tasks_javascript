@@ -1,0 +1,32 @@
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]] выведите элементы приведенного массива в виде HTML таблицы table.
+
+let table=document.querySelector('#table')
+
+for(subArr of arr){
+    let td=document.createElement('td');
+
+    for(newArr of subArr){
+        let tr=document.createElement('tr')
+        tr.innerHTML=newArr
+        td.append(tr)
+    }
+    table.append(td)
+}
+
+
+Модифицируйте предыдущую задачу так, чтобы в таблицу записывались не элементы, а квадраты этих элементов.
+
+let table=document.querySelector('#table')
+
+for(let subArr of arr){
+    let td=document.createElement('td');
+
+    for(let newArr of subArr){
+        let tr=document.createElement('tr')
+        newArr**=2
+        tr.innerHTML=newArr
+        td.append(tr)
+    }
+    table.append(td)
+}
+
